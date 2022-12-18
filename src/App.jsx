@@ -6,7 +6,7 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/photos")
+    fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
@@ -19,8 +19,8 @@ function App() {
           return (
             <>
               <div className="">
-                <h1>{el?.title}</h1>
-                <img src={el?.url} alt="" />
+                <h1>{el?.id}</h1>
+                <h1>{el?.name}</h1>
               </div>
             </>
           );
